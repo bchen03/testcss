@@ -1,0 +1,64 @@
+#main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 6fr 2fr;
+    grid-template-areas: 
+        "header header header header"
+        "article1 article2 article3 sidebar"
+        "footer footer footer footer";
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    justify-items: stretch; /* grid row axis */
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;   /* grid column axis */
+}
+.header {
+    grid-area: header;
+    border: 1px solid red;
+}
+.article1 {
+    grid-area: article1;
+    border: 1px solid green;
+}
+.article1 > header {
+    background: brown;
+    color: white;
+    height: 20px;   
+}
+.article1-main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;  /* shorthand for flex-direction and flex-wrap */
+    /*flex-direction: row;
+    flex-wrap: nowrap;*/
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly; /* align on main axis */
+    height: calc(100% - 20px); /* height needed for vertical centering using margin: auto */
+    background: peachpuff;
+}
+.article1-main > section {
+    /*border: 1px solid palegreen;*/
+    margin: auto; /* centering in flex container */
+} 
+.article2 {
+    grid-area: article2;
+    border: 1px solid blue;
+}
+.article3 {
+    grid-area: article3;
+    border: 1px solid yellow;
+}
+.sidebar {
+    grid-area: sidebar;
+    border: 1px solid gray;
+}
+.footer {
+    grid-area: footer;
+    border: 1px solid magenta;
+}
