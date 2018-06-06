@@ -1,10 +1,10 @@
 #main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 6fr 2fr;
+    grid-template-rows: 1fr 8fr 1fr;
     grid-template-areas: 
         "header header header header"
-        "article1 article2 article3 sidebar"
+        "article1 article1 article2 sidebar"
         "footer footer footer footer";
     grid-column-gap: 10px;
     grid-row-gap: 5px;
@@ -45,10 +45,29 @@
 .article1-main > section {
     /*border: 1px solid palegreen;*/
     margin: auto; /* centering in flex container */
+    border: 1px solid brown;
 } 
 .article2 {
     grid-area: article2;
     border: 1px solid blue;
+}
+.article2 > .article2-header {
+    height: 120px;
+    line-height: 120px; /* To center text on one line */
+    text-align:  center;
+    border: 1px solid cyan;
+}
+.article2 > .article2-section {
+    height: calc(100% - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.article2 > .article2-section > .article2-circle {
+    height: 200px;
+    width: 200px;
+    border-radius: 505%;
+    background-color: red;
 }
 .article3 {
     grid-area: article3;
