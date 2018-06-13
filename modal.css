@@ -2,7 +2,13 @@
     background-color: rgb(230, 80, 25);
     color: white;
     padding: 1em;
-    
+    box-shadow: 2px 2px 6px lightslategray;
+    transition: all ease-in-out 250ms;  
+}
+
+#clickBtn:hover {
+    box-shadow: 2px 2px 6px lightslategray;
+    transform: translateY(5px);    /* Move element */
 }
 
 .modal {
@@ -20,7 +26,7 @@
     width: 70%;
     margin: 30% auto;
     box-shadow: 3px 3px 3px rgb(197, 197, 197);
-    animation: modalbox .5s;
+    animation: modalbox .9s;
 }
 
 @keyframes modalbox {
@@ -36,11 +42,13 @@
 
 .closeBtn {
     float: right;
+    transition: all ease-in-out 250ms;
 }
 
 .closeBtn:hover {
     cursor: pointer;
-    color: lightgray;
+    color: black;
+    transform: translateY(1px) translateX(1px);
 }
 
 .modal-content {
