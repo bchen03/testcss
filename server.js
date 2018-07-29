@@ -3,6 +3,8 @@ const autoprefixer = require("express-autoprefixer")
 const root = "./gridandflexbox.html"
 const path = require("path")
 
+const port = 8078
+
  const app = express()
     // .use(autoprefixer({
     //     browsers: "last 2 versions", 
@@ -13,7 +15,7 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "/gridandflexbox.html"))
 })
 
-app.listen(8079)
+app.listen(port)
 
-console.log("==> Express ready on port 8079")
+console.log(`==> Express ready on port ${port}`)
 

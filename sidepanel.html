@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Side Panel App</title>
+    <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+    <div class="main">
+        <div class="sidepanel">
+            <div class="close">
+                <a href="#">&times;</a>
+            </div>
+            <div class="side-content">
+                <div class="side-content-item">
+                    <label for="first-name">First Name</label>
+                    <input type="text" placeholder="Enter your first name" id="first-name" />
+                </div>
+                <div class="side-content-item">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" placeholder="Enter your last name" id="last-name" />
+                </div>
+                <div>
+                    <button>Click Me</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-open">
+                <a class="open">&#9776;</a>
+            </div>
+            <header class="content-header">What is Lorem Ipsum?</header>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially 
+            unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with 
+            desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+        </div>
+        <script>
+            const sidepanel = document.getElementsByClassName('sidepanel')[0];
+            const openbtn = document.getElementsByClassName('open')[0];
+            const closebtn = document.getElementsByClassName('close')[0];
+            openbtn.addEventListener('click', () => {
+                // openbtn.style.display = "none";
+                openbtn.style.visibility = "hidden";
+                sidepanel.style.width = "30em";
+                sidepanel.style.padding = "1em";
+                closebtn.style.display = "block";
+            });
+            closebtn.addEventListener('click', () => {
+                // openbtn.style.display = "block";
+                openbtn.style.visibility = "visible";
+                sidepanel.style.width = "0";
+                sidepanel.style.padding = "0";
+                closebtn.style.display = "none";
+            });
+
+
+        </script>
+</body>
+</html>
